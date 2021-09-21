@@ -1,10 +1,10 @@
 let matrix;
-function createMatrix(n) {
+function createMatrix(number) {
   matrix = [];
   //let rows= [];
-  for (let i = 0; i < n; i++) {
+  for (let i = 0; i < number; i++) {
     let rows = [];
-    for (let j = 0; j < n; j++) {
+    for (let j = 0; j < number; j++) {
       rows.push(1);
     }
     matrix.push(rows);
@@ -13,13 +13,13 @@ function createMatrix(n) {
   //return matrix;
 }
 
-function fillMatrix(matrix, n) {
+function fillMatrix(matrix, number) {
   let numbers = 1;
 
   let rowStart = 0;
   let colStart = 0;
-  let rowEnd = n - 1;
-  let colEnd = n - 1;
+  let rowEnd = number - 1;
+  let colEnd = number - 1;
 
   do {
     //направо
@@ -55,12 +55,12 @@ function fillMatrix(matrix, n) {
   return matrix;
 }
 
-function combination(n) {
-  createMatrix(n);
-  fillMatrix(matrix, n);
+function combination(number) {
+  createMatrix(number);
+  fillMatrix(matrix, number);
   console.log(fillMatrix(matrix));
 }
-combination(5);
+combination(8);
 
 
 
