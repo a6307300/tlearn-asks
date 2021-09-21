@@ -2,12 +2,16 @@
 
 // Например: 441 => четыреста сорок один
 
-var num=[];
-var words=[];
-var word;
 
-function splitting (numb) {
-    console.log(numb)
+
+function splitting (numberStart) {
+
+    let num=[];
+let words=[];
+let word;
+
+    console.log(numberStart)
+    let numb=parseInt(numberStart,10);
  number=Number(numb).toString();
  num = number.split('');
  for (let i=0; i<num.length;i++) {
@@ -72,10 +76,10 @@ for (let i = 0; i<num.length ;i++) {
 }
 if (num.length==5) {
     if ((num[1]!=2&&num[1]!=3&&num[1]!=4&&num[1]!=0)||num[0]==1){
-    word=`${words[0]} ${words[1]} тысяч ${words[2]||''} ${words[3]||''} ${words[4]||''}`
+    word=`${words[0]} ${words[1]} тысяч${words[2]||''} ${words[3]||''} ${words[4]||''}`
 }
 if ((num[1]!=2&&num[1]!=3&&num[1]!=4&&num[1]==0)||num[0]==1){
-    word=`${words[0]} тысяч ${words[1]||''} ${words[2]||''} ${words[3]||''} ${words[4]||''}`
+    word=`${words[0]} тысяч${words[1]||''} ${words[2]||''} ${words[3]||''} ${words[4]||''}`
 }
 if (num[1]==1 && num[0]!=1){
     word=`${words[0]} одна тысяча ${words[2]||''} ${words[3]||''} ${words[4]||''}`
@@ -118,6 +122,6 @@ if (num.length==6) {
 
 console.log(word);
 }
-// }
 
-splitting('21');
+
+splitting(10110);
